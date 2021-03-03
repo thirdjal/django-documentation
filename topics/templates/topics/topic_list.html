@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Topics List{% endblock title %}
+
+{% block content %}
+    <ul>
+        {% for topic in topic_list %}
+            <li><a href="{% url 'detail' topic.pk %}">{{ topic.title }}</a></li>
+        {% empty %}
+            <p>Add some topics</p>
+        {% endfor %}
+    </ul>
+{% endblock content %}

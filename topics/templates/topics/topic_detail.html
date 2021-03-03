@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ topic.title }}{% endblock title %}
+
+{% block content %}
+    <ol>
+        {% include 'topics/topic.html' %}
+    </ol>
+{% endblock content %}

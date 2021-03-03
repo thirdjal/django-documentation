@@ -1,0 +1,11 @@
+<li>
+    <p>{{ topic.title }}</p>
+    <hr>
+    <p>{{ topic.example }}</p>
+    <p>{{ topic.content }}</p>
+    {% for subtopic in topic.subtopics.all %}
+        <ol>
+            {% include 'topics/topic.html' with topic=subtopic %}
+        </ol>
+    {% endfor %}
+</li>
